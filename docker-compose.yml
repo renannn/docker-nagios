@@ -7,6 +7,8 @@ services:
     ports:
       - 4000:80
       - 4001:3000
+    environment: 
+      - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=alexanderzobnin-zabbix-datasource
     restart: always
     logging:
       options:
