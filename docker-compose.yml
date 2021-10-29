@@ -8,7 +8,9 @@ services:
       - 4000:80
       - 4001:3000
     environment: 
-      - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=alexanderzobnin-zabbix-datasource
+      - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=alexanderzobnin-zabbix-datasource;epam-timebase-datasource      
+      - GF_PLUGINS_PLUGIN_ADMIN_ENABLED=true
+      - GF_INSTALL_PLUGINS=https://github.com/epam/TimeBaseGrafanaPlugin/releases/download/1.0.5/epam-timebase-datasource.zip;epam-timebase-datasource;epam-timebase-datasource
     restart: always
     logging:
       options:
